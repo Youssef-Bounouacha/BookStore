@@ -3,11 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
   </head>
-  <body>
+  <body background="img/bgimg.jpg">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+  </div>
+  <div class="page">
+ <img src="img/logopic.png" class="logo">
+  </div>
+  <div class="info">
+    <h1>Welcome to our <span>BookStore</span> :)</h1><br>
+    <p>Our BookStore featers the latest titles and gives you the best online bookshoping experience.</p><br><br>
+  </div>
+    <div class="customer">
+      <form>
+        First Name<br>
+        <input type="text" name="yourfirstname"><br><br>
+        Last Name<br>
+        <input type="text" name="yourlastname"><br><br>
+        Your date of Birth<br>
+        <select name="month">
+        <option value="month">Month</option>
+        <option value="january">January</option>
+        <option value="february">February</option>
+        <option value="march">March</option>
+        <option value="april">April</option>
+        <option value="may">May</option>
+        <option value="june">June</option>
+        <option value="july">July</option>
+        <option value="august">August</option>
+        <option value="september">September</option>
+        <option value="october">October</option>
+        <option value="november">November</option>
+        <option value="december">December</option>
+      </select>
+      <select name="days">
+        <option value="days">Days</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <select name="year">
+        <option value="year">Year</option>
+        <option value="1990">1990</option>
+        <option value="1991">1991</option>
+        <option value="1993">1992</option>
+        <option value="1994">1994</option>
+        <option value="1995">1995</option>
+        <option value="1996">1996</option>
+        <option value="1997">1997</option>
+        <option value="1998">1998</option>
+        <option value="1999">1999</option>
+        <option value="2000">2000</option>
+      </select><br><br>
+      Your Area of Intrest<br>
+        <select name="area of intrest">
+        <option value="area of intrest">Area of Intrest</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="comic">Comic</option>
+        <option value="classics">Classic</option>
+      </form>
+    </div>
   </body>
 </html>

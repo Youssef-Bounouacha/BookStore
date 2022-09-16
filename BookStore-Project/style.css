@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.page{
+    height: 300px;
+    width: 300px;
+    font-family: sans-serif;
+}
+.logo{
+    width: 100%;
+    cursor: pointer;
+    transition: 1s;
+    position: relative;
+    right:150px;
+    bottom: 250px;
+}
+.page img:hover{
+    transform: scale(1.2);
+    position: relative;
+} 
+.customer{
+    height: 400px;
+    width: 400px;
+    font-family: sans-serif;  
+    position: relative;
+    left: 200px;
+}
+
+.info h1{
+    font-size: 60px;
+    color: #212121;
+    line-height: 22px;
+    position: relative;
+    bottom: 50px;
+    left: 50px;
+}
+.info p{
+    font-size: 30px;
+    color: #212121;
+    position: relative;
+    bottom: 50px;
+    left: 50px;
+}
+span{
+    color: red;
+}
+body{
+    background-size: cover;
+    background-position: center;
+    padding: 200px 100px;
+}
+
