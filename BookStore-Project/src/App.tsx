@@ -1,23 +1,29 @@
-import { useState } from 'react'
 import React from 'react'
-import Nav from './components/Nav/Nav';
-import styles from './Nav.module.css';
+import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'
+import Navbar from './components/Nav/Navbar'
+import Home from './components/Home'
+import Books from './components/Books'
+import Aboutus from './components/Aboutus'
+import Login from './components/login/login'
+import Signup from './components/login/signup'
+
 
 function App() {
   return (
-    <>
-    <Nav />
-     <h1>Welcome to our <span>BookStore</span> :)</h1>
-     <p>Our BookStore features the latest titles and gives you the best online bookshoping experience.</p>
-    
-    </>
-    
-   
-    
-      
-
-
-  );
-}
-
+   <Router>
+      <div className='App'>
+        <Navbar/> 
+        <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/Books' element={<Books/>}/>
+        <Route path='/Aboutus' element={<Aboutus/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/signup' element={<Signup/>}/> 
+        </Routes>
+      </div>
+   </Router> 
+  )
+ 
+};
 export default App
+
