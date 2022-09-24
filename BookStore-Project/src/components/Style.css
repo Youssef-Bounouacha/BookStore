@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'EB Garamond', serif;
+  font-family: 'Poppins', sans-serif;
+
+}
+:root{
+  --primary-color:navy;
+  --secondary-color:rgb(231, 231, 246); 
+}
+body{
+  background-color: var(--secondary-color);
+}
+.homepage1 h1{
+  margin-top: 7%;
+  font-size: 60px;
+  margin-left: 2%;
+}
+.homepage1 h2{
+  margin-left: 2%;
+  font-size: 50px;
+  
+ 
+}
+
+.homepage1 nav{
+  color: navy;
+}
+.aboutpart1{
+  margin-left: 2%;
+  margin-top: 5%;
+  margin-right: 50%;
+}
+.aboutpart1 nav{
+  font-size:80px;
+  color: navy;
+}
+.aboutpart2{
+  margin-left:60% ;
+ margin-bottom: 50%;
+  padding: 0px;
+}
