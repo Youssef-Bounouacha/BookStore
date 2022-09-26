@@ -30,6 +30,7 @@ body{
   color: navy;
 }
 .aboutpart1{
+  width: 50%;
   margin-left: 2%;
   margin-top: 5%;
   margin-right: 50%;
@@ -38,8 +39,9 @@ body{
   font-size:80px;
   color: navy;
 }
-.aboutpart2{
-  margin-left:60% ;
- margin-bottom: 50%;
-  padding: 0px;
+.aboutpart2 img{
+  position: absolute;
+  width: 40%;
+  right:100px;
+  top: 300px; 
 }

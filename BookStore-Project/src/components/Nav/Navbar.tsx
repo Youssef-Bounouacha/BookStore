@@ -1,9 +1,9 @@
 import React,{useState} from 'react'
-import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'
-import {AppBar,Toolbar,Typography,Tabs,Tab,Button,useMediaQuery,useTheme,Link} from '@mui/material';
+import {AppBar,Toolbar,Typography,Tabs,Tab,Button,useMediaQuery,useTheme,Link,Menu,MenuItem,IconButton,} from '@mui/material';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
-import PersonIcon from '@mui/icons-material/Person';
+import AccountCircle from '@mui/icons-material/AccountCircle';
 import DrawerComp from './DrawerComp';
+
 
 const PAGES = ["Home","Books","About Us"]
 const Navbar = () => {
@@ -12,6 +12,12 @@ const Navbar = () => {
     console.log(theme);
     const isMatch = useMediaQuery(theme.breakpoints.down("md"));
     console.log(isMatch);
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);};
+  const handleClose = () => {
+    setAnchorEl(null);};
+
   return (
     <React.Fragment>
         <AppBar style={{background:'navy'}}>
@@ -30,9 +36,9 @@ const Navbar = () => {
                     ) : (
                         <>
                         <Tabs textColor="inherit" 
-                        value={value} 
-                        onChange={(link,value)=> setValue(value)} 
-                        indicatorColor="secondary">
+                             value={value} 
+                             onChange={(link,value)=> setValue(value)} 
+                            indicatorColor="secondary">
 
                             <Link href="/">
                             <Tab  style={{color:'white'}} label='Home'/>
@@ -45,11 +51,43 @@ const Navbar = () => {
                             </Link>
 
                         </Tabs>
-                        <Link href="/login" style={{marginLeft:'auto'}} >
-                        <Button style={{marginLeft:'auto',background:'navy',color:'white'}} variant="contained">Login</Button>
-                        </Link>
-                       
+                        <div>
+                        <IconButton
+                           
+                            size="large"
+                            aria-label="account of current user"
+                            aria-controls="menu-appbar"
+                            aria-haspopup="true"
+                            onClick={handleMenu}
+                            color="inherit"
+                        >  
+                        <AccountCircle />
+                        </IconButton>
+                        <Menu
+                            id="menu-appbar"
+                            anchorEl={anchorEl}
+                            anchorOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                            }}
+                            keepMounted
+                            transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                            }}
+                            open={Boolean(anchorEl)}
+                            onClose={handleClose}
+                            style={{marginRight:'0 auto'}}
+                        >
+                            <Link href="/Profile">
+                            <MenuItem onClick={handleClose}>Profile</MenuItem>
+                            </Link>
+                            <MenuItem onClick={handleClose}>Log Out</MenuItem>
+                        </Menu>
+                        </div>
                         </>
+
+                      
                     )
                 }
               

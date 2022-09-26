@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import {Drawer,List,ListItemButton,ListItemIcon,ListItemText,IconButton,Link,Tab} from '@mui/material'
+import {Drawer,List,IconButton,Link,Tab} from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 
 const PAGES = ["Home","Books","About Us","Login","Signup"]
@@ -27,11 +27,16 @@ function DrawerComp() {
                             <Tab label='About Us'/>
                             </li>
                           </Link>
-                          <Link style={{color:'navy'}} href="/login">
+                          <Link style={{color:'navy'}} href="/Profile">
                             <li>
-                            <Tab label='Log In'/>
-                            </li>  
+                            <Tab label='Profile'/>
+                            </li>
                           </Link>
+                            <li>
+                            <Tab label='Log Out'/>
+                            </li>
+                         
+                          
 
        
       </List>
@@ -39,7 +44,6 @@ function DrawerComp() {
     <IconButton style={{color:'white', marginLeft:'auto'}} onClick={()=> setOpenDrawer(!openDrawer)}>
     <MenuIcon/>
     </IconButton>
-   
    </React.Fragment>
   )
 }
