@@ -4,8 +4,9 @@ import Navbar from './components/Nav/Navbar'
 import Home from './components/Home'
 import Books from './components/Books'
 import Aboutus from './components/Aboutus'
-import Login from './components/login/login'
-import Signup from './components/login/signup'
+//import Login from './components/login/login'
+//import Signup from './components/login/signup'
+import './components/Style.css'
 
 
 function App() {
@@ -17,8 +18,6 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/Books' element={<Books/>}/>
         <Route path='/Aboutus' element={<Aboutus/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/signup' element={<Signup/>}/> 
         </Routes>
       </div>
    </Router> 
